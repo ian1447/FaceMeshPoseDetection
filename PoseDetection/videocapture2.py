@@ -14,13 +14,11 @@ while True:
         break
     elif cv2.waitKey(1) & 0xFF == ord('r'):
         if recording_flag == False:
-            print('start')
             # we are transitioning from not recording to recording
             output = cv2.VideoWriter('CAPTURE1.mp4', -1, 30, (640, 480))
             recording_flag = True
         else:
             # transitioning from recording to not recording
-            print("done")
             recording_flag = False
 
     if recording_flag:
